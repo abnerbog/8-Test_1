@@ -1,3 +1,10 @@
+---
+title: "Summative 1"
+format:
+  html: 
+    self-contained: true
+---
+
 # ACTIVITY Summative 1 {#Summative1}
 
 ### Instructions
@@ -11,7 +18,7 @@ Comment your code to let me know what you are trying to do, in case something do
 Turn in a knitted rmd (html or pdf). If you can't get your document to knit when you go to turn it in, just comment out the lines of code that are causing the knit to fail, knit the document, and submit.
 
 ## Problem 1
-Load the tidyverse, lubridate, and dataRetrieval packages.
+Load the tidyverse, lubridate, patchwork, and dataRetrieval packages.
 
 ```{r}
 
@@ -42,12 +49,16 @@ For all plots in this test, label axes properly and use a theme other than the d
 ## Problem 4
 We want to look at the big event that happens from November 11, 2020 to November 27, 2020. Filter the dataset down to this time frame and save it separately. Make a plot with the same setup as in \#3 with these newly saved data.
 
+We also want to see how specific conductivity changes during the event. Create a second plot of specific conductivity (SpC_mScm) for the same time range. 
+
+Stack these two plots on top of each other using the patchwork package.
+
 ```{r}
 
 ```
 
 ## Problem 5
-For this storm, we are curious about how conductivity changes with the stream level. To do this, make a scatter plot that shows Stage on the x axis and specific conductivity (SpC_mScm) on the y. (units: mScm) Color the points on the plot using the datetime column. Use the plot to describe how specific conductivity changes with stream stage throughout the storm. (not functionally, just how the values change)
+For the same storm, we are curious about how conductivity changes with the stream level. To do this, make a scatter plot that shows Stage on the x axis and specific conductivity (SpC_mScm) on the y. (units: mScm) Color the points on the plot using the datetime column. Use the plot to describe how specific conductivity changes with stream stage throughout the storm. (not based on hydrologic processes, just describe the pattern in values on the plot)
 
 ```{r}
 
@@ -55,6 +66,8 @@ For this storm, we are curious about how conductivity changes with the stream le
 
 ## Problem 6
 Continuing to look at the storm, as an exploratory data analysis, we want to create a plot that shows all the parameters measured. To do this, pivot the STORM EVENT data so there is a column that has the values for all the parameters measured as individual rows, along with another column that identifies the type of measurement. Then use facet_wrap with the "name" column (or whatever you call it) as the facet. Be sure to set the parameters of facet_wrap such that the y axes are all allowed to be different ranges.
+
+We need to get rid of a few parameters that aren't helpful though, so remove "Press_cmH2O_pt", "PPO2",  and "TSSmgL"
 
 EX:\
 Date Value Name\
@@ -94,6 +107,8 @@ a. Read and save the gage information for the three gages using readNWISsite().
 b. Use the readNWISdv() function to read and save the daily discharge values for the following three gages for the 2020 water year (10-01-2019 to 9-30-2020). And then use the renameNWIScolumns() function to make the names human-friendly.
 
 c. Join the gage site information from (a) to the data from (b) so you can reference the gages by their names.
+
+Output a preview of your data below the code chunk using head()
 
 ```{r}
 
