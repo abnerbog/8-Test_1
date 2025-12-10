@@ -1,8 +1,22 @@
 ---
-title: "Summative 1"
+title: "Chapter 8: Summative 1"
+date: today
+github: https://github.com/VT-Hydroinformatics/8-Test_1
+author:
+  - name: JP Gannon
+    orcid: 0000-0002-4595-3214
+    github: jpgannon
+    url: https://jpgannon.github.io/
+    affiliation: 
+      - name: Virginia Tech
+        url: https://www.vt.edu/
 format:
   html: 
     self-contained: true
+  ipynb:
+      nb-frontmatter: true
+execute: 
+  enabled: true
 ---
 
 # ACTIVITY Summative 1 {#Summative1}
