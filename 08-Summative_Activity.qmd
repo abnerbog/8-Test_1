@@ -41,11 +41,11 @@ Load the tidyverse, lubridate, patchwork, and dataRetrieval packages.
 ## Problem 2
 Read in the McDonald Hollow dataset in the project folder.
 
-### What are the data types of the first three columns?
+**What are the data types of the first three columns?**
 
-### How long is the data (number of rows)?
+**How long is the data (number of rows)?**
 
-### What is the name of the last column?
+**What is the name of the last column?**
 
 ```{r}
 
@@ -74,7 +74,7 @@ Stack these two plots on top of each other using the patchwork package.
 ## Problem 5
 For the same storm, we are curious about how conductivity changes with the stream level. To do this, make a scatter plot that shows Stage on the x axis and specific conductivity (SpC_mScm) on the y. (units: mScm) Color the points on the plot using the datetime column. 
 
-### Use the plot to describe how specific conductivity changes with stream stage throughout the storm. (not based on hydrologic processes, just describe the pattern in values on the plot)
+**Use the plot to describe how specific conductivity changes with stream stage throughout the storm. (not based on hydrologic processes, just describe the pattern in values on the plot)**
 
 ```{r}
 
@@ -108,7 +108,7 @@ You can do this all in one statement using pipes.
 ## Problem 8
 Plot the distribution of the flow temperature and show as vertical lines on the plot the mean, median, and IQR. Be careful about how you show IQR. Look at the definition and then think about how you would put it on the plot. Describe in the text above the chunk what color is what statistic in the plot. 
 
-### Using the shape of the distribution and the measures you plotted, explain why you think the distribution is normal or not. What statistical test could you perform to see if it is normal?
+**Using the shape of the distribution and the measures you plotted, explain why you think the distribution is normal or not. What statistical test could you perform to see if it is normal?**
 
 ```{r}
 
