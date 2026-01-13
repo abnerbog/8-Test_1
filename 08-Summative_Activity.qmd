@@ -20,7 +20,7 @@ execute:
   enabled: true
 ---
 
-# ACTIVITY Summative 1 {#Summative1}
+# ACTIVITY Summative 1
 
 ### Instructions
 
