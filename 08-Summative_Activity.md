@@ -1,0 +1,137 @@
+# Chapter 8: Summative 1
+JP Gannon
+2026-02-12
+
+# ACTIVITY Summative 1
+
+### Instructions
+
+Please read carefully!  
+
+Write your code in the provided code chunks and answer any questions by
+typing outside the chunk.
+
+Comment your code to let me know what you are trying to do, in case
+something doesn’t work.
+
+Turn in a rendered rmd (html or pdf). If you can’t get your document to
+render when you go to turn it in, just comment out the lines of code
+that are causing the render to fail, render the document, and submit.
+
+## Problem 1
+
+Load the tidyverse, lubridate, patchwork, and dataRetrieval packages.
+
+## Problem 2
+
+Read in the McDonald Hollow dataset in the project folder.
+
+**What are the data types of the first three columns?**
+
+**How long is the data (number of rows)?**
+
+**What is the name of the last column?**
+
+## Problem 3
+
+Plot the stage of the stream (Stage_m_pt) on the y axis as a line and
+the date on the x. These stage data are in meters, convert them to
+centimeters for the plot.
+
+For all plots in this test, label axes properly and use a theme other
+than the default.
+
+## Problem 4
+
+We want to look at the big event that happens from November 11, 2020 to
+November 27, 2020. Filter the dataset down to this time frame and save
+it separately. Make a plot with the same setup as in \#3 with these
+newly saved data.
+
+We also want to see how specific conductivity changes during the event.
+Create a second plot of specific conductivity (SpC_mScm) for the same
+time range.
+
+Stack these two plots on top of each other using the patchwork package.
+
+## Problem 5
+
+For the same storm, we are curious about how conductivity changes with
+the stream level. To do this, make a scatter plot that shows Stage on
+the x axis and specific conductivity (SpC_mScm) on the y. (units: mScm)
+Color the points on the plot using the datetime column.
+
+**Use the plot to describe how specific conductivity changes with stream
+stage throughout the storm. (not based on hydrologic processes, just
+describe the pattern in values on the plot)**
+
+## Problem 6
+
+Continuing to look at the storm, as an exploratory data analysis, we
+want to create a plot that shows all the parameters measured. To do
+this, pivot the STORM EVENT data so there is a column that has the
+values for all the parameters measured as individual rows, along with
+another column that identifies the type of measurement. Then use
+facet_wrap with the “name” column (or whatever you call it) as the
+facet. Be sure to set the parameters of facet_wrap such that the y axes
+are all allowed to be different ranges.
+
+We need to get rid of a few parameters that aren’t helpful though, so
+remove “Press_cmH2O_pt”, “PPO2”, and “TSSmgL”
+
+EX:  
+Date Value Name  
+10/1/20 12 Stage  
+10/1/20 6 Temp  
+….
+
+## Problem 7
+
+We want to create a table that clearly shows the differences in water
+temperature for the three months at the two locations (flow and pool) in
+the FULL data set (not the storm subset). To do this: Create a new
+column in the full dataset called “month” and set it equal to the month
+of the datetime column using the month() function. Then group your
+dataset by month and summarize temperature at each location by mean.
+Save these results to a new object and output it so it appears below
+your chunk when you knit. Be sure the object has descriptive column
+names.
+
+You can do this all in one statement using pipes.
+
+## Problem 8
+
+Plot the distribution of the flow temperature and show as vertical lines
+on the plot the mean, median, and IQR. Be careful about how you show
+IQR. Look at the definition and then think about how you would put it on
+the plot. Describe in the text above the chunk what color is what
+statistic in the plot.
+
+**Using the shape of the distribution and the measures you plotted,
+explain why you think the distribution is normal or not. What
+statistical test could you perform to see if it is normal?**
+
+## Problem 9
+
+In this question we will get and format data for three USGS gages.
+
+Gages: 03177710, 03173000, 03177480  
+Discharge in cubic feet per second (cfs) code: 00060
+
+1.  Read and save the gage information for the three gages using
+    readNWISsite().
+
+2.  Use the readNWISdv() function to read and save the daily discharge
+    values for the following three gages for the 2020 water year
+    (10-01-2019 to 9-30-2020). And then use the renameNWIScolumns()
+    function to make the names human-friendly.
+
+3.  Join the gage site information from (a) to the data from (b) so you
+    can reference the gages by their names.
+
+Output a preview of your data below the code chunk using head()
+
+## Problem 10
+
+Using the data from \#9, Plot flow on the y axis and date on the x axis,
+showing the data as a line, and coloring by gage name.
