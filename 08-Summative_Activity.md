@@ -1,6 +1,11 @@
-# Chapter 8: Summative 1
-JP Gannon
-2026-02-12
+---
+title: 'Chapter 8: Summative 1'
+date: 2026-03-23T00:00:00.000Z
+authors:
+  - id: jpgannon
+github: https://github.com/VT-Hydroinformatics/8-Test_1
+---
+
 
 # ACTIVITY Summative 1
 
