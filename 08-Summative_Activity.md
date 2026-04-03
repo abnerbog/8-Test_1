@@ -3,7 +3,27 @@ title: 'Chapter 8: Summative 1'
 date: 2026-03-23T00:00:00.000Z
 authors:
   - id: jpgannon
+    name: JP Gannon
+    email: jpgannon@vt.edu
+    github: jpgannon
+    orcid: 0000-0002-4595-3214
+    corresponding: true
+    url: https://jpgannon.github.io/
+    affiliations:
+      - vt-tech
+affiliations:
+  - id: vt-tech
+    name: Virginia Tech
+    url: https://www.vt.edu/
+subject: Courseware
+doi: https://doi.org/10.4211/hs.6285edb8aaa04850b48ed03dcbadcfb8
+venue:
+  title: View Resource on HydroShare
+  url: https://hydroshare.org/resource/6285edb8aaa04850b48ed03dcbadcfb8/
 github: https://github.com/VT-Hydroinformatics/8-Test_1
+downloads:
+  - file: 08-Summative_Activity.md
+  - file: 08-Summative_Activity.pdf
 ---
 
 
